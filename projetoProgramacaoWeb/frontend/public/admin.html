@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Administração - Brechó Vintage</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/assets/css/index-style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: black">Administração Brechó</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin.html">Administração</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Painel de Administração -->
+    <div class="container mt-5">
+        <h1 class="text-center">Painel de Administração</h1>
+        <p class="text-center">Gerencie seus produtos, promoções e usuários aqui</p>
+
+        <!-- Gerenciar Usuários -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Gerenciar Usuários</h5>
+                    <p class="card-text">Gerencie os usuários cadastrados.</p>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle w-100" type="button" id="crudUsers"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Ações de Usuários
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="crudUsers">
+                            <li><a class="dropdown-item" href="register.html">Adicionar Usuário</a></li>
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#visualizeUsersModal" id="visualisarUsuarios">Visualizar
+                                    Usuários</a></li>
+                            <li><a class="dropdown-item" data-bs-toggle="modal" href="#"
+                                    data-bs-target="#updateUsersModal" id="buttonUpdate">Atualizar Usuário</a></li>
+                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#deleteUserModal"
+                                    id="buttonExclude" href="#">Excluir Usuário</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal para Visualizar usuarios -->
+    <div class="modal fade" id="visualizeUsersModal" tabindex="-1" aria-labelledby="visualizeUsersModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="visualizeUsersModalLabel">Usuários</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Exemplo de tabela de usuários -->
+                    <table class="table" id="clientes-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody id='clientes-list'>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Deletar Usuários -->
+    <div class="modal fade" id="deleteUserModal" tabindex="-1" aria-labelledby="deleteUsersModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteUsersModalLabel">Deletar Usuarios</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="inputIDDelete" class="form-label">ID do Usuário</label>
+                            <input type="text" class="form-control" id="inputIDDelete"
+                                placeholder="Digite o ID do usuário">
+                        </div>
+                    </form>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="buttonExcludeOfficial"> Excluir</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Atualizar usuario -->
+    <div class="modal fade" id="updateUsersModal" tabindex="-1" aria-labelledby="updateUsersModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateUsersModalLabel">Atualizar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateClassForm">
+                        <!-- Campo para o ID da Classe -->
+                        <div class="mb-3">
+                            <label for="classId" class="form-label">ID</label>
+                            <input type="text" class="form-control" id="classId" required>
+                        </div>
+
+                        <div class="modal-body">
+                            <form id="updateUserForm">
+                                <!-- Campo para Nome -->
+                                <div class="mb-3">
+                                    <label for="userName" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="userName" placeholder="Digite seu nome"
+                                        required>
+                                </div>
+
+                                <!-- Campo para E-mail -->
+                                <div class="mb-3">
+                                    <label for="userEmail" class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" id="userEmail"
+                                        placeholder="Digite seu e-mail" required>
+                                </div>
+
+                                <!-- Campo para Senha -->
+                                <div class="mb-3">
+                                    <label for="userPassword" class="form-label">Nova Senha</label>
+                                    <input type="password" class="form-control" id="userPassword"
+                                        placeholder="Digite sua nova senha">
+                                </div>
+                            </form>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="saveUserUpdateButton">Salvar Alterações</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../src/assets/js/scriptAdmin.js"></script>
+
+</html>

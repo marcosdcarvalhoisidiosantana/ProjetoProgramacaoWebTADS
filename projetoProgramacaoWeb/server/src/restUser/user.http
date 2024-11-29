@@ -1,0 +1,38 @@
+
+
+GET http://localhost:3000/api/usuario
+Content-Type: application/json
+
+###
+GET http://localhost:3000/api/usuario/filtro/email/joao.email@example.com
+Content-Type: application/json
+
+### 
+POST http://localhost:3000/api/usuario
+Content-Type: application/json
+
+  {
+    "nome": "Nome Cliente",
+    "email": "joao.email@example.com",
+    "senha": "Supersecreta",
+    "genero": "1, 2 ou 3",
+    "data_nascimento": "TIME STAMP",
+    "pais": "Pais"
+  }
+
+###
+PUT http://localhost:3000/api/usuario/2
+Content-Type: application/json
+
+  {
+    "nome": "Nome Cliente",
+    "email": "joao.email@example.com",
+    "senha": "Supersecreta",
+    "genero": "1, 2 ou 3",
+    "data_nascimento": "TIME STAMP",
+    "pais": "Pais"
+  }
+
+###
+DELETE  http://localhost:3000/api/usuario/1
+Content-Type: application/json

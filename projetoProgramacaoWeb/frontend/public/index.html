@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brechó Online Vintage</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../src/assets/css/index-style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="admin.html" style="color: black">Brechó Vintage</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Loja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Doar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                    <!-- Seção de Login -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Minha Conta
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                            <li><a class="dropdown-item" href="register.html">Registrar</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Minha Conta</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero bg-image d-flex justify-content-center align-items-center" style="background-image: url('hero.jpg');">
+        <div class="text-center text-light">
+            <h1 class="display-4">Encontre Tesouros Vintage</h1>
+            <p class="lead">Compra e venda de roupas sustentáveis e estilosas</p>
+            <a href="shop.html" class="btn btn-primary">Ver Produtos</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container py-5">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <img src="../src/assets/imagem/sustain.webp" alt="Sustentável" class="mb-3" style="width: 150px;">
+                <h3>Sustentável</h3>
+                <p>Contribua para o meio ambiente comprando roupas de segunda mão.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="../src/assets/imagem/vintage.webp" alt="Vintage" class="mb-3" style="width: 150px;">
+                <h3>Estilo Vintage</h3>
+                <p>Encontre peças únicas que não se encontram em qualquer lugar.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="../src/assets/imagem/doacoes.webp" alt="Doe Roupas" class="mb-3" style="width: 150px;">
+                <h3>Doe Roupas</h3>
+                <p>Doe roupas que você não usa mais e ajude outras pessoas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container py-5">
+        <h2 class="text-center mb-5">Produtos em Destaque</h2>
+        <div class="row">
+            <!-- Exemplo de Produto -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="produto1.jpg" class="card-img-top" alt="Produto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Vestido Vintage Floral</h5>
+                        <p class="card-text">R$ 99,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outro Produto -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="produto2.jpg" class="card-img-top" alt="Produto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Jaqueta Jeans Retrô</h5>
+                        <p class="card-text">R$ 120,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outro Produto -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="produto3.jpg" class="card-img-top" alt="Produto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Camisa Xadrez Anos 90</h5>
+                        <p class="card-text">R$ 80,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Brechó Vintage. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Modal de Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="loginEmail" required>
+                </div>
+                <div class="mb-3">
+                <label for="loginPassword" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Entrar</button>
+            </form>
+            <div class="text-center mt-3">
+                <p>Não tem uma conta? <a href="register.html" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal" id="registerRedirect">Registrar</a></p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script>
+        // Captura o clique no link de "Registrar"
+        document.getElementById('registerRedirect').addEventListener('click', function(event) {
+            event.preventDefault(); // Impede o comportamento padrão do link
+    
+            // Redireciona para a página de registro
+            window.location.href = 'register.html';
+        });
+    </script>
+    
+  
+  
+</body>
+</html>

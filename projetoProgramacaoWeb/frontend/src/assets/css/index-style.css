@@ -1,0 +1,71 @@
+/* Custom Styles */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.hero {
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    color: #3d3636;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Geral */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1ead4; /* Cor suave de fundo */
+    color: #3e2f2f; /* Cor de texto escura */
+}
+
+.navbar {
+    background-color: #8a4d3b; /* Cor de cobre para a navbar */
+}
+
+.nav-link {
+    color: #2c2c2a !important; /* Cor clara para links */
+}
+
+.nav-link:hover {
+    color: #d9a17b !important; /* Efeito hover para links */
+}
+
+.card {
+    background-color: #d9a17b; /* Cor de madeira/cobre suave para os cards */
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.card-title {
+    color: #3e2f2f; /* Cor mais escura para título */
+}
+
+.btn-primary {
+    background-color: #8a4d3b; /* Botão com cor de cobre */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #a06046; /* Efeito hover no botão */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Ajuste o valor conforme necessário */
+}

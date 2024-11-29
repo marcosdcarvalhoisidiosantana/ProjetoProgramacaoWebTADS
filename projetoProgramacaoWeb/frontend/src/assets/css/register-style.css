@@ -1,0 +1,28 @@
+/* Estilos customizados para a página de registro */
+body {
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+button {
+    font-size: 1.1rem;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
